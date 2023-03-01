@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'docs',
   },
-  base: '/2023FebWISchedule/',
+  base: '/WISchedule/',
 });

@@ -6,5 +6,5 @@
 
 # ASC WI Schedule Website
 
-This repo is home to the 2023 February ASC Weekend Intensive Website. Built with **Typescript, Svelte, & Vite** and hosted on github pages.
+This repo is home to the ASC Weekend Intensive Schedule Website. Built with **Typescript, Svelte, & Vite** and hosted on github pages.
 Note that the large objects used to generate the schedule are generated elsewhere.
