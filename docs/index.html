@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/2023FebWISchedule/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/2023FebWISchedule/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/2023FebWISchedule/favicon/favicon-16x16.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekend Intensive Schedule Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <script type="module" crossorigin src="/2023FebWISchedule/assets/index-a1fa79c6.js"></script>
+    <link rel="stylesheet" href="/2023FebWISchedule/assets/index-cb650bbd.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        const asURL = new URL(window.location.href);
+
+        const shouldDelete = asURL.search !== '?i=true';
+
+        let elems = document.querySelectorAll('.collapsible');
+        let instances = M.Collapsible.init(elems);
+
+        const activities = document.querySelectorAll('.sched-item > .card-content');
+        for (let act of activities) {
+          let actSize = parseInt(act.querySelector('.hidden').innerText);
+          let increase = 60 * (actSize / 15 - 1);
+          act.style.height = `${120 + increase}px`;
+        }
+
+        if (shouldDelete) {
+          async function delNodes(nList) {
+            await nList.forEach((n) => n.remove());
+          }
+
+          const day1Links = document.querySelectorAll('.day-1 > .card-action > a');
+          const day2Links = document.querySelectorAll('.day-2 > .card-action > a');
+
+          const allMatsDay1Links = document.querySelectorAll('.day1-all-links');
+          const allMatsDay2Links = document.querySelectorAll('.day2-all-links');
+
+          const allLinks = document.querySelectorAll('.all-links');
+          const now = new Date();
+
+          const day1Date = new Date(2023, 1, 25);
+          const day2Date = new Date(2023, 1, 26);
+
+          if (now < day1Date) {
+            // console.log("It's not day one, deleting all links...");
+            delNodes([...day1Links, ...day2Links, ...allMatsDay1Links, ...allMatsDay2Links]);
+          } else if (now < day2Date) {
+            // console.log("It's not day 2 deleting day 2+");
+            delNodes([...day2Links, ...allMatsDay2Links]);
+          } else {
+            console.log("It's day 2 not deleting anything");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
