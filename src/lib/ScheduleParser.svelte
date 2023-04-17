@@ -19,9 +19,9 @@
         <span class="dayofWeek">
           &nbsp;
           {#if day.daynum === '1'}
-            Sat
+            Saturday
           {:else if day.daynum === '2'}
-            Sun
+            Sunday
           {/if}
         </span>
         <span class="titleFix">&nbsp;{day.title}</span>
