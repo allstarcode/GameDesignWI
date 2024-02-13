@@ -161,7 +161,7 @@ export const allData: Schedule = [
         links: [
           {
             displayText: 'Student Survey',
-            linkURL: 'https://allstarcode.typeform.com/to/RUn6B7Vy',
+            linkURL: 'https://form.typeform.com/to/pIn6fKm3',
           },
           { displayText: "What's the SI?", linkURL: 'https://i.imgur.com/NEEEpos.gif' },
           { displayText: 'Apply to the SI!', linkURL: 'https://allstarcodeapply.smapply.io/' },
