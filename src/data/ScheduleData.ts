@@ -163,7 +163,6 @@ export const allData: Schedule = [
             displayText: 'Student Survey',
             linkURL: 'https://form.typeform.com/to/pIn6fKm3',
           },
-          { displayText: "What's the SI?", linkURL: 'https://i.imgur.com/NEEEpos.gif' },
           { displayText: 'Apply to the SI!', linkURL: 'https://allstarcodeapply.smapply.io/' },
         ],
       },
