@@ -54,10 +54,8 @@
           const day2Date = new Date(2024, 1, 25);
 
           if (now < day1Date) {
-            // console.log("It's not day one, deleting all links...");
             delNodes([...day1Links, ...day2Links, ...allMatsDay1Links, ...allMatsDay2Links]);
           } else if (now < day2Date) {
-            // console.log("It's not day 2 deleting day 2+");
             delNodes([...day2Links, ...allMatsDay2Links]);
           } else {
             console.log("It's day 2 not deleting anything");
