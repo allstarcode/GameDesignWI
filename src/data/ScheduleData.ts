@@ -161,12 +161,12 @@ export const allData: Schedule = [
         links: [
           {
             displayText: 'Student Survey',
-            linkURL: 'https://form.typeform.com/to/pIn6fKm3',
+            linkURL: 'https://form.typeform.com/to/bIkx7h0G',
           },
           {
             displayText: 'REGISTER FOR THE AI INQUIRY WEEKEND INTENSIVE!',
             linkURL:
-              'https://www.eventbrite.com/e/all-star-code-2024-weekend-intensive-ai-inquiry-tickets-845569058817?aff=oddtdtcreator',
+              'https://www.eventbrite.com/e/all-star-code-2025-weekend-intensive-ai-inquiry-tickets-1234247660979?aff=oddtdtcreator',
           },
           { displayText: 'Apply to the SI!', linkURL: 'https://allstarcodeapply.smapply.io/' },
         ],

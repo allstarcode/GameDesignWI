@@ -48,15 +48,15 @@
           const allLinks = document.querySelectorAll('.all-links');
           const now = new Date();
 
-          const day1Date = new Date(2024, 1, 24);
-          const day2Date = new Date(2024, 1, 25);
+          const day1Date = new Date(2025, 1, 22);
+          const day2Date = new Date(2025, 1, 23);
 
           if (now < day1Date) {
             delNodes([...day1Links, ...day2Links, ...allMatsDay1Links, ...allMatsDay2Links]);
           } else if (now < day2Date) {
             delNodes([...day2Links, ...allMatsDay2Links]);
           } else {
-            console.log("It's day 2 not deleting anything");
+            console.log("It's on or past day 2 not deleting anything!");
           }
         }
       });
